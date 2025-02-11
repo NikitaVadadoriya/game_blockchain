@@ -89,7 +89,7 @@ class App extends Component {
       const address = networkData.address
       const token = new web3.eth.Contract(abi, address)
       this.setState({ token })
-      const totalSupply = await token.methods.totalSupply().call()
+      const totalSupply = await token.methods.totalSupply().call() //contract function calling 
       this.setState({ totalSupply })
       // Load Tokens
       let balanceOf = await token.methods.balanceOf(accounts[0]).call()
@@ -218,12 +218,8 @@ class App extends Component {
                       />
                     )
                   })}
-
-
                 </div>
-
                 <div>
-
                   <h5>Tokens Collected:<span id="result">&nbsp;{this.state.tokenURIs.length}</span></h5>
 
                   <div className="grid mb-4" >
@@ -236,11 +232,8 @@ class App extends Component {
                         />
                       )
                     })}
-
                   </div>
-
                 </div>
-
               </div>
 
             </main>

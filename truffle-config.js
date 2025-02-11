@@ -9,7 +9,7 @@ module.exports = {
       network_id: "*" // Match any network id
     },
   },
-  contracts_directory: './src/contracts/',
+  contracts_directory: './src/contracts/',  //deploy smat contract in this directory 
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
